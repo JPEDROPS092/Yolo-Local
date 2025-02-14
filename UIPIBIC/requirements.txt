@@ -1,0 +1,17 @@
+opencv-python
+pyyaml
+torch
+numpy
+customtkinter
+pyttsx3
+mediapipe
+gtts
+pygame
+keyboard
+ultralytics
+torchvision
+transformers
+scipy
+sounddevice
+soundfile
+Pillow

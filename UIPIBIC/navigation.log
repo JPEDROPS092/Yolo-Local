@@ -1,0 +1,16 @@
+2025-02-13 19:58:12,514 - __main__ - INFO - Successfully loaded YOLO model from best.pt
+2025-02-13 19:58:12,553 - __main__ - INFO - Audio feedback system initialized
+2025-02-13 19:58:12,598 - __main__ - INFO - Navigation app initialized successfully
+2025-02-13 19:58:16,994 - __main__ - INFO - Status update: Running
+2025-02-13 19:58:16,994 - __main__ - INFO - Detection started
+2025-02-13 20:06:26,887 - __main__ - INFO - Starting cleanup...
+2025-02-13 20:06:26,888 - __main__ - ERROR - Error during cleanup: invalid command name ".!ctkframe.!ctkframe.!ctkbutton.!label"
+2025-02-13 20:06:56,595 - INFO - Modelo YOLO carregado: best.pt
+2025-02-13 20:06:56,617 - INFO - Sistema de áudio inicializado
+2025-02-13 20:06:56,659 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'
+2025-02-13 20:07:25,275 - INFO - Modelo YOLO carregado: best.pt
+2025-02-13 20:07:25,299 - INFO - Sistema de áudio inicializado
+2025-02-13 20:07:25,345 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'
+2025-02-13 20:07:34,534 - INFO - Modelo YOLO carregado: best.pt
+2025-02-13 20:07:34,560 - INFO - Sistema de áudio inicializado
+2025-02-13 20:07:34,588 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'

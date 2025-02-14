@@ -1,0 +1,33 @@
+# Camera settings
+camera_index: 0  # Index of the webcam to use (0 for default)
+frame_width: 1280  # Camera frame width
+frame_height: 720  # Camera frame height
+fps_target: 30  # Target frames per second
+
+# Model paths
+yolo_model_path: "best.pt"  # Path to YOLOv8 model (using nano for speed)
+
+# Detection settings
+confidence_threshold: 0.5  # Default confidence threshold for detections
+iou_threshold: 0.45  # IOU threshold for NMS
+max_det: 50  # Maximum number of detections per frame
+
+# Audio settings
+audio_interval: 2.0  # Minimum interval between audio feedback
+audio_rate: 175  # Speech rate for TTS
+volume_level: 0.8  # Default volume level (0-1)
+
+# Safety thresholds
+collision_warning_threshold: 0.7  # Threshold for collision warnings
+proximity_warning_distance: 2.0  # Distance threshold for proximity warnings (meters)
+minimum_object_size: 0.1  # Minimum object size ratio for alerts
+
+# Interface settings
+window_width: 1280
+window_height: 920
+video_width: 800
+video_height: 600
+
+# Performance settings
+enable_gpu: true  # Enable GPU acceleration if available
+batch_size: 1  # Batch size for inference

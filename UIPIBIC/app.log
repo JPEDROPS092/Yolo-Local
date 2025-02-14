@@ -1,0 +1,21 @@
+2025-02-13 16:50:43,547 - INFO - Configuration loaded successfully.
+2025-02-13 16:50:43,574 - INFO - YOLO model loaded from models/yolov8n.pt
+2025-02-13 16:50:43,605 - INFO - TTS engine initialized.
+2025-02-13 16:50:43,696 - INFO - Starting application...
+2025-02-13 16:50:46,350 - WARNING - Camera not available, skipping detection loop iteration.
+2025-02-13 16:50:48,038 - ERROR - Error in detection loop: 'ImageDraw' object has no attribute 'textsize'
+Traceback (most recent call last):
+  File "/home/jpcode092/Documents/Projetos/PIBICUI/teste.py", line 407, in detection_loop
+    processed_frame = self.draw_detections(frame.copy(), filtered_detections)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jpcode092/Documents/Projetos/PIBICUI/teste.py", line 478, in draw_detections
+    text_width, text_height = draw.textsize(label_text, font=font)
+                              ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+
+2025-02-13 16:51:00,655 - INFO - Loading LLaVA model...
+2025-02-13 16:51:00,656 - ERROR - Error loading LLaVA model: No module named 'llava'
+2025-02-13 16:51:00,656 - ERROR - Error loading LLaVA model: No module named 'llava'
+2025-02-13 16:51:03,126 - INFO - Application closing...
+2025-02-13 16:51:03,131 - INFO - Application closed.
+2025-02-13 16:51:03,131 - INFO - Application closing...
