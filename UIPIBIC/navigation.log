@@ -1,16 +1,42 @@
-2025-02-13 19:58:12,514 - __main__ - INFO - Successfully loaded YOLO model from best.pt
-2025-02-13 19:58:12,553 - __main__ - INFO - Audio feedback system initialized
-2025-02-13 19:58:12,598 - __main__ - INFO - Navigation app initialized successfully
-2025-02-13 19:58:16,994 - __main__ - INFO - Status update: Running
-2025-02-13 19:58:16,994 - __main__ - INFO - Detection started
-2025-02-13 20:06:26,887 - __main__ - INFO - Starting cleanup...
-2025-02-13 20:06:26,888 - __main__ - ERROR - Error during cleanup: invalid command name ".!ctkframe.!ctkframe.!ctkbutton.!label"
-2025-02-13 20:06:56,595 - INFO - Modelo YOLO carregado: best.pt
-2025-02-13 20:06:56,617 - INFO - Sistema de áudio inicializado
-2025-02-13 20:06:56,659 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'
-2025-02-13 20:07:25,275 - INFO - Modelo YOLO carregado: best.pt
-2025-02-13 20:07:25,299 - INFO - Sistema de áudio inicializado
-2025-02-13 20:07:25,345 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'
-2025-02-13 20:07:34,534 - INFO - Modelo YOLO carregado: best.pt
-2025-02-13 20:07:34,560 - INFO - Sistema de áudio inicializado
-2025-02-13 20:07:34,588 - CRITICAL - Erro fatal durante inicialização: 'NavigationApp' object has no attribute 'setup_shortcuts'
+2025-05-21 11:36:29,518 - __main__ - INFO - ================================================
+2025-05-21 11:36:29,518 - __main__ - INFO -  Iniciando Aplicação de Navegação (Sem Áudio)...
+2025-05-21 11:36:29,518 - __main__ - INFO - ================================================
+2025-05-21 11:36:29,519 - __main__ - INFO - --- Inicializando Aplicação de Navegação ---
+2025-05-21 11:36:29,519 - __main__ - INFO - Executando no Linux. Verificações comuns para câmera:
+2025-05-21 11:36:29,520 - __main__ - INFO -   1. Índice correto em 'config.yaml' (verifique com 'ls /dev/video*')
+2025-05-21 11:36:29,520 - __main__ - INFO -   2. Usuário no grupo 'video' ('sudo usermod -aG video $USER' -> relogar/reiniciar)
+2025-05-21 11:36:29,520 - __main__ - INFO -   3. Nenhuma outra aplicação usando a câmera
+2025-05-21 11:36:29,520 - __main__ - INFO -   4. Dependências como 'v4l-utils' instaladas ('sudo pacman -S v4l-utils --needed')
+2025-05-21 11:36:29,521 - __main__ - INFO - Configuração carregada de /home/jpcode092/UIPIBICJP/UIPIBIC/config.yaml
+2025-05-21 11:36:29,521 - __main__ - INFO - Índice da câmera a ser usado: 0
+2025-05-21 11:36:29,542 - __main__ - INFO - Modelo YOLO carregado de best.pt para CPU.
+2025-05-21 11:36:29,585 - __main__ - INFO - Atalhos de teclado ativados (Espaço: Iniciar/Parar, Esc: Sair)
+2025-05-21 11:36:29,585 - __main__ - INFO - Aplicação inicializada com sucesso (Áudio Desabilitado)
+2025-05-21 11:36:29,586 - __main__ - INFO - Entrando no loop de eventos principal (mainloop)...
+2025-05-21 11:36:31,256 - __main__ - INFO - Status: Tentando iniciar a câmera...
+2025-05-21 11:36:31,258 - __main__ - INFO - Tentando abrir câmera índice 0 com backend: V4L2
+2025-05-21 11:36:31,425 - __main__ - INFO - Câmera 0 aberta com sucesso usando backend V4L2.
+2025-05-21 11:36:31,426 - __main__ - INFO - Tentando definir propriedades: Largura=1280, Altura=720, FPS=30
+2025-05-21 11:36:31,455 - __main__ - INFO - Propriedades reais da câmera: 1280x720 @ 10.0fps
+2025-05-21 11:36:31,456 - __main__ - INFO - Tentando leitura inicial do frame...
+2025-05-21 11:36:32,806 - __main__ - INFO - Leitura inicial do frame bem-sucedida.
+2025-05-21 11:36:32,808 - __main__ - INFO - Loop de detecção iniciado.
+2025-05-21 11:36:32,808 - __main__ - INFO - Status: Detecção em execução...
+2025-05-21 11:36:32,809 - __main__ - INFO - Detecção iniciada.
+2025-05-21 11:36:37,928 - __main__ - INFO - Fechamento da janela solicitado. Iniciando limpeza...
+2025-05-21 11:36:37,928 - __main__ - INFO - --- Iniciando Limpeza da Aplicação ---
+2025-05-21 11:36:37,928 - __main__ - INFO - Limpeza: Parando detecção...
+2025-05-21 11:36:37,929 - __main__ - INFO - Parando processo de detecção...
+2025-05-21 11:36:37,932 - __main__ - INFO - Aguardando thread de detecção terminar...
+2025-05-21 11:36:40,932 - __main__ - WARNING - Thread de detecção não parou graciosamente.
+2025-05-21 11:36:40,933 - __main__ - INFO - Liberando câmera...
+2025-05-21 11:36:40,936 - __main__ - INFO - Câmera liberada.
+2025-05-21 11:36:40,936 - __main__ - INFO - Detecção parada.
+2025-05-21 11:36:40,936 - __main__ - INFO - Limpeza: Parando listener de teclado...
+2025-05-21 11:36:41,437 - __main__ - INFO - Listener de teclado parado.
+2025-05-21 11:36:41,437 - __main__ - INFO - Limpeza: Destruindo janela...
+2025-05-21 11:36:41,443 - __main__ - INFO - Janela destruída.
+2025-05-21 11:36:41,443 - __main__ - INFO - --- Limpeza da Aplicação Concluída ---
+2025-05-21 11:36:41,444 - __main__ - INFO - Loop principal da aplicação finalizado normalmente.
+2025-05-21 11:36:41,444 - __main__ - INFO - Ponto final de saída da aplicação atingido.
+2025-05-21 11:36:41,444 - __main__ - INFO - ================================================

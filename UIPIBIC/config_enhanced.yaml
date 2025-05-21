@@ -1,0 +1,13 @@
+camera_fps: 30
+camera_height: 720
+camera_index: 0
+camera_width: 1280
+confidence_threshold: 0.45
+default_model_key: YOLOv8n (Nano)
+display_width: 800
+enable_gpu: true
+iou_threshold: 0.5
+max_det: 100
+selected_model_type: predefined
+video_loop: false
+yolo_model_path_custom: custom_model.pt
