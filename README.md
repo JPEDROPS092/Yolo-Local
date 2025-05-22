@@ -32,8 +32,8 @@ Sistema de detecção de objetos em tempo real usando YOLOv8, com suporte para c
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
-cd nome-do-repo
+git clone https://github.com/JPEDROPS092/Yolo-Local
+cd Yolo-Local
 ```
 
 2. Instale as dependências:
