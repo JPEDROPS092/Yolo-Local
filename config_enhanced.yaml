@@ -1,3 +1,4 @@
+# Arquivo antigo da interface. O programa lê config.yaml.
 camera_fps: 30
 camera_height: 720
 camera_index: 0

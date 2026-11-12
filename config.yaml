@@ -1,33 +1,84 @@
-# Camera settings
-camera_index: 0  # Index of the webcam to use (0 for default)
-frame_width: 1280  # Camera frame width
-frame_height: 720  # Camera frame height
-fps_target: 30  # Target frames per second
+# ObstacleSense AI
+# Padrões pensados para CPU: YOLO11 nano, quadro 640x480, inferência 320.
 
-# Model paths
-yolo_model_path: "best.pt"  # Path to YOLOv8 model (using nano for speed)
+# Câmera
+camera_index: 0
+frame_width: 640
+frame_height: 480
+fps_target: 15
 
-# Detection settings
-confidence_threshold: 0.5  # Default confidence threshold for detections
-iou_threshold: 0.45  # IOU threshold for NMS
-max_det: 50  # Maximum number of detections per frame
+# Modelo. Troque por yolov8n.pt para usar o YOLOv8.
+yolo_model_path: "yolo11n.pt"
+enable_gpu: false
+imgsz: 320
+batch_size: 1
 
-# Audio settings
-audio_interval: 2.0  # Minimum interval between audio feedback
-audio_rate: 175  # Speech rate for TTS
-volume_level: 0.8  # Default volume level (0-1)
+# Detecção
+confidence_threshold: 0.40
+iou_threshold: 0.45
+max_det: 30
+obstacle_classes:
+  - person
+  - bicycle
+  - car
+  - motorcycle
+  - bus
+  - train
+  - truck
+  - dog
+  - cat
+  - bench
+  - chair
+  - couch
+  - potted plant
+  - dining table
+  - stop sign
+  - fire hydrant
+  - backpack
+  - suitcase
+  - umbrella
+  - horse
+  - cow
+  - sheep
 
-# Safety thresholds
-collision_warning_threshold: 0.7  # Threshold for collision warnings
-proximity_warning_distance: 2.0  # Distance threshold for proximity warnings (meters)
-minimum_object_size: 0.1  # Minimum object size ratio for alerts
+# Áudio. Estes valores são lidos pelo sintetizador e pelo limite entre frases.
+audio_interval: 2.0
+audio_rate: 175
+volume_level: 0.8
+audio_enabled: true
+# auto | pyttsx3 | espeak | piper
+tts_engine: auto
+piper_model_path: ""
 
-# Interface settings
+# Segurança. proximity em metros; collision é a nota (0 a 1) que vira perigo alto.
+collision_warning_threshold: 0.7
+proximity_warning_distance: 2.0
+minimum_object_size: 0.1
+
+# Geometria da câmera do celular, na altura do peito, olhando para a frente.
+hfov_degrees: 66.0
+vfov_degrees: 0.0
+camera_height_m: 1.2
+camera_pitch_deg: 0.0
+center_margin: 0.15
+
+# Profundidade monocular. Desligada por padrão para manter a latência baixa.
+depth_enabled: false
+depth_model: "depth-anything/Depth-Anything-V2-Small-hf"
+depth_every_n_frames: 4
+
+# Rastreamento
+tracker_iou: 0.3
+approach_drop_m: 0.35
+
+# Serviço usado pelo aplicativo
+api_host: "0.0.0.0"
+api_port: 8000
+
+# Janela
 window_width: 1280
 window_height: 920
 video_width: 800
 video_height: 600
-
-# Performance settings
-enable_gpu: true  # Enable GPU acceleration if available
-batch_size: 1  # Batch size for inference
+display_width: 800
+video_loop: false
