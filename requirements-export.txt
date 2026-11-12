@@ -1,0 +1,5 @@
+# Opcional, só para python main.py --export onnx.
+# O TFLite pede também o pacote tensorflow.
+onnx>=1.12.0,<2.0.0
+onnxruntime>=1.16.0
+onnxslim>=0.1.82

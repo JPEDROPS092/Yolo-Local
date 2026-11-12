@@ -30,7 +30,15 @@ app.log
 *.pt
 *.pth
 *.onnx
+*.tflite
 models/
+runs/
+outputs/
+*.wav
+
+# Testes
+.pytest_cache/
+.mypy_cache/
 
 # IDE
 .idea/

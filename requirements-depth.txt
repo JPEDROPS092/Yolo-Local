@@ -1,0 +1,4 @@
+# Opcional. Só é necessário com depth_enabled: true ou --depth.
+transformers>=4.45.0
+accelerate>=0.27.0
+timm>=0.9.0

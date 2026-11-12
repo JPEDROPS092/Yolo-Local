@@ -1,0 +1,117 @@
+"""Classes de obstáculo, tamanhos reais e nomes falados em português."""
+
+from __future__ import annotations
+
+# Altura e largura típicas, em metros, para a estimativa por tamanho aparente.
+REAL_SIZE_M: dict[str, tuple[float, float]] = {
+    "person": (1.70, 0.50),
+    "bicycle": (1.10, 0.60),
+    "car": (1.50, 1.80),
+    "motorcycle": (1.20, 0.70),
+    "airplane": (4.00, 12.00),
+    "bus": (3.00, 2.50),
+    "train": (3.50, 3.00),
+    "truck": (3.20, 2.50),
+    "boat": (1.50, 2.20),
+    "traffic light": (0.90, 0.30),
+    "fire hydrant": (0.75, 0.30),
+    "stop sign": (2.00, 0.75),
+    "bench": (0.85, 1.50),
+    "bird": (0.25, 0.20),
+    "cat": (0.30, 0.20),
+    "dog": (0.55, 0.35),
+    "horse": (1.60, 0.70),
+    "sheep": (0.85, 0.45),
+    "cow": (1.40, 0.70),
+    "backpack": (0.45, 0.30),
+    "umbrella": (1.00, 0.90),
+    "handbag": (0.30, 0.30),
+    "suitcase": (0.65, 0.40),
+    "chair": (0.90, 0.45),
+    "couch": (0.85, 1.80),
+    "potted plant": (0.70, 0.40),
+    "bed": (0.70, 1.40),
+    "dining table": (0.75, 1.20),
+    "tv": (0.60, 0.90),
+    "laptop": (0.25, 0.35),
+    "bottle": (0.25, 0.08),
+}
+
+# (artigo, nome falado). O nome em inglês do modelo nunca entra na fala.
+CLASS_PT: dict[str, tuple[str, str]] = {
+    "person": ("uma", "pessoa"),
+    "bicycle": ("uma", "bicicleta"),
+    "car": ("um", "carro"),
+    "motorcycle": ("uma", "motocicleta"),
+    "airplane": ("um", "avião"),
+    "bus": ("um", "ônibus"),
+    "train": ("um", "trem"),
+    "truck": ("um", "caminhão"),
+    "boat": ("um", "barco"),
+    "traffic light": ("um", "semáforo"),
+    "fire hydrant": ("um", "hidrante"),
+    "stop sign": ("uma", "placa de pare"),
+    "parking meter": ("um", "parquímetro"),
+    "bench": ("um", "banco"),
+    "bird": ("um", "pássaro"),
+    "cat": ("um", "gato"),
+    "dog": ("um", "cachorro"),
+    "horse": ("um", "cavalo"),
+    "sheep": ("uma", "ovelha"),
+    "cow": ("uma", "vaca"),
+    "backpack": ("uma", "mochila"),
+    "umbrella": ("um", "guarda-chuva"),
+    "handbag": ("uma", "bolsa"),
+    "suitcase": ("uma", "mala"),
+    "chair": ("uma", "cadeira"),
+    "couch": ("um", "sofá"),
+    "potted plant": ("um", "vaso de planta"),
+    "bed": ("uma", "cama"),
+    "dining table": ("uma", "mesa"),
+    "tv": ("uma", "televisão"),
+    "laptop": ("um", "notebook"),
+    "bottle": ("uma", "garrafa"),
+    "cell phone": ("um", "celular"),
+    "book": ("um", "livro"),
+}
+
+VEHICLE_LABELS = {
+    "bicycle",
+    "car",
+    "motorcycle",
+    "airplane",
+    "bus",
+    "train",
+    "truck",
+    "boat",
+}
+
+DEFAULT_OBSTACLE_CLASSES = [
+    "person",
+    "bicycle",
+    "car",
+    "motorcycle",
+    "bus",
+    "train",
+    "truck",
+    "dog",
+    "cat",
+    "bench",
+    "chair",
+    "couch",
+    "potted plant",
+    "dining table",
+    "stop sign",
+    "fire hydrant",
+    "backpack",
+    "suitcase",
+    "umbrella",
+    "horse",
+    "cow",
+    "sheep",
+]
+
+
+def spoken_name(label: str) -> tuple[str, str]:
+    """Artigo e nome em português. Classe desconhecida vira 'obstáculo'."""
+    return CLASS_PT.get(label, ("um", "obstáculo"))
